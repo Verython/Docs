@@ -1,22 +1,32 @@
-.. Verython documentation master file, created by
-   sphinx-quickstart on Thu May 19 15:09:31 2016.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 Welcome to Verython's documentation!
 ====================================
 
-Contents:
+The documentation for the site is organized into a couple sections:
+
+* :ref:`user-docs`
+* :ref:`feature-docs`
+* :ref:`about-docs`
+
+.. _user-docs:
 
 .. toctree::
    :maxdepth: 2
+   :caption: User documentation
 
+   license
 
+.. _feature-docs:
 
-Indices and tables
-==================
+.. toctree::
+   :maxdepth: 2
+   :caption: Development documentation
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   license
 
+.. _about-docs:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: About the project
+
+   license
