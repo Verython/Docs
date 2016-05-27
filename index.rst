@@ -21,7 +21,7 @@ The documentation for the site is organized into a couple sections:
    :maxdepth: 2
    :caption: Development documentation
 
-   license
+   grammar
 
 .. _about-docs:
 
