@@ -9,13 +9,15 @@ Lexical components
 
 The lexical components of Verthon are basically the same of the Python ones, adding the next reserved words:
 
-- ``TOP: '@top';``
-- ``INITAL: '@initial';``
-- ``ALWAYS: '@always';``
-- ``SWITCH : 'switch';``
-- ``CASE : 'case';``
-- ``DEFAULT: 'default';``
-- ``BLOCK: 'block';``
+::
+
+    TOP: '@top';
+    INITAL: '@initial';
+    ALWAYS: '@always';
+    SWITCH : 'switch';
+    CASE : 'case';
+    DEFAULT: 'default';
+    BLOCK: 'block';
 
 The first three ones, ``@top``, ``@initial`` and ``@always``, are decorators for realizing special operations in Verilog. ``switch``, ``case`` and ``default`` are for the implementation of the *switch* control structure, non-native in Python. Finally, ``block`` is a defined structure made for surronding with ``begin``-``end`` in Verilog code.
 
@@ -30,6 +32,16 @@ Decorators
 
 Control sentences
 =================
+
+The loop structures ``for`` and ``while`` are implemented in the same way that in Python. This also happens with the conditional structure ``if``-``elif``-``else``.
+
+The ``switch`` sentence only receives a simple statement for each case and the notation is as follows::
+
+    switch(sel):
+	case 0: return A
+	case 1: return B
+	case 2: return C
+	default: return 0
 
 Functions
 =========
