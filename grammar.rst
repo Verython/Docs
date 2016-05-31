@@ -2,7 +2,7 @@ Introduction
 ============
 The present work shows the implementation of a Python to Verilog translator. The modified Python grammar is called **Verython** and was made using ANTLR4 and Java.
 
-For those that were users of hardware description languages like Verilog know the complexity of the language and they also know that even for simple tasks a lot of code is required. **Verython** is an alternative that allows to use all the Python sugar to improve the time spended in a hardware development task.
+This code was implemented using *Visitors*, which captures every grammar rule and generates his respective code.
 
 Lexical components
 ==================
