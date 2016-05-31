@@ -28,3 +28,40 @@ Functions
 Each function it's defined in a Python way, but the arguments has two parts, before the *;* should be entered the inputs of the system, in a notation very similar to the Verilog's one, and after the *;* it's going to be expected the output signals with their respective name.
 
 It's also possible to comunicate several modules using this notation, because every function will be a diferent Verilog's module. It's posible then to have several functions defined, but the ``@top`` function will be the first and mandatory.
+
+Example
+=======
+
+A very common case and basic case is the multiplexor module. In this code you should like to have something like tihs in Verilog::
+
+    `timescale 1ns/1ps
+    module mux(A, B, C, sel, O,)
+        input wire [23:0]A;
+        input wire [23:0]B;
+        input wire [23:0]C;
+        input wire [1:0]sel;
+        output reg [23:0]O;
+        always @(sel or A or B or C)
+        begin
+            case(sel)
+                'd0: O <= 'b10101;
+                'd1: O <= B;
+                'd2: O <= A;
+                default: O <= 'd0;
+            endcase
+        end
+    endmodule
+
+The idea is to acomplish this module in the same way, so the proposed code in Verython will be::
+
+    @top
+    def mux ([23:0]A, [23:0]B, [23:0]C, [1:0]sel; [23:0]O):
+        @always(sel, A, B, C)
+        block:
+            switch(sel):
+                case 0:  return 0b10101
+                case 1:  return B
+                case 2:  return A
+                default: return 0
+
+As can be seen, the Verython code isn't only shorter, but it also removes some confusing and unusefull code that could lead to mistakes.
