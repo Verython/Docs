@@ -45,3 +45,7 @@ The ``switch`` sentence only receives a simple statement for each case and the n
 
 Functions
 =========
+
+Each function it's defined in a Python way, but the arguments has two parts, before the *;* should be entered the inputs of the system, in a notation very similar to the Verilog's one, and after the *;* it's going to be expected the output signals with their respective name.
+
+It's also possible to comunicate several modules using this notation, because every function will be a diferent Verilog's module. It's posible then to have several functions defined, but the ``@top`` function will be the first and mandatory.
