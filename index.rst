@@ -13,7 +13,7 @@ The documentation for the site is organized into a couple sections:
    :maxdepth: 2
    :caption: User documentation
 
-   license
+   howto
 
 .. _feature-docs:
 
